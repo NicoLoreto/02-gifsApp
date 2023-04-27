@@ -1,0 +1,25 @@
+
+    <h5>
+    Buscar:
+    </h5>
+    <!-- form-control El primer elemento que nos 
+    proporciona Bootstrap es la clase form-control la 
+    cual sirve para identificar un campo de entrada, ya 
+    sea un input, select o un textarea. Mediante la 
+    clase form-control vamos a conseguir que el elemento
+    de entrada ocupe un 100% del contenedor en el cual 
+    está definido. -->
+
+    <!-- capturar lo que estoy escribiendo con keyup="buscar()" -->
+    
+    
+    <!-- keyup.enter llamara al evento de tocar enter -->
+    <!-- puedo poner una referencia local con # para que sepa que 
+    es lo que necesito llamar y con value mando el valor -->
+    
+    <input type="text" 
+    class="form-control" 
+    placeholder="Buscar gifs..."
+    (keyup.enter)="buscar()"
+    #txtBuscar>
+  

@@ -1,0 +1,41 @@
+<!-- SIDEBAR -->
+
+  <!-- big-dark: modo oscuro, border-rigth: borde a la derecha, p-3: padding de 3 -->
+    <!-- "bg-dark border-rigth p-3" -->
+  <div class= 'barraLateral border-rigth p-3' id="sidebar">
+
+    <!-- text-light: color claro -->
+    <h3 class="texto">
+      Gifs-App
+    </h3>
+    
+    <!-- l inea blanca -->
+    <hr class="text-white">
+
+    
+    
+
+    <!-- list-reset para que no tenga los bullet point -->
+    <div class="list-group list-reset cont ">
+
+
+      <!-- el ngFor sirve para iterar dentro del html, declaro la variable e itero en el array -->
+     
+      <!-- list-group-item-action efecto de click -->
+      <ul class="ul">
+        <li *ngFor="let item of history" class = "listaResultados">
+          
+          <a href="#" class="list-group-item list-group-item-action a"
+          (click)="buscar(item)">
+            <!-- los pipes no hacen modificaciones a la data, solo manipulan el template, en este
+            caso mantiene la forma que pasamos originalmente en el form, aca lo uso porque
+            desp necesito veificar si el elem existe en el array y para eso lo necesito en upperCase
+          o lowerCase -->
+              {{item | titlecase}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--  FIN SIDEBAR -->

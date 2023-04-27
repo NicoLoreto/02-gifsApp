@@ -1,0 +1,38 @@
+<!-- <ul>
+    <li *ngFor= "let gif of resultados">
+        traigo la propiedad de gif que necesito
+        {{gif.title}} 
+    </li>
+</ul> -->
+
+<div class="row">
+    <!-- para panatllas medianas <div class="col-md-4 col-md-6"></div> -->
+    <!-- tmb uso las animaciones de animate -->
+    <div *ngFor= "let gif of resultados" 
+        class="col-md-4 col-md-6
+        anim">
+
+            <div class="card">
+                <!-- aca pongo la url de la img, para que sea el
+                valor producto del objeto src va entre [], sino 
+            seria un string -->
+            <!-- la clase class="class-img-top" es para manejar el tamano de las card -->
+                <img [src]="gif.images.downsized_medium.url" 
+                     [alt]="gif.title"
+                     class="class-img-top">
+                <div class="card-body">
+                    <p class="card-text textoCard"> 
+                        <!-- {{gif.title}} -->
+                        <!-- tomo el mid de la imagen con downsized_medium (lo encuentro en las propiedades dentro de la consola) -->
+
+                        {{gif.title}}
+
+                        <!-- para mostrar la img se lo coloco a una etique html
+                         -->
+                    </p>
+                </div>
+            </div>
+    </div>
+
+</div>
+

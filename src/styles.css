@@ -1,0 +1,93 @@
+/* trabajo el css del app.component.html */
+
+html, body{
+    margin: 0;
+    font-family: monospace;
+    font-size: 2em;
+  
+    
+}
+
+/* use el container para establecer el footer debajo siempre,
+al principio y cuando muestra los gifs,
+lo que hace mion higth es mostrar el total de la pantalla
+gtr le da tamano a los elementos. porq grid
+intentara ocupar siempre el maximo */
+.container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+/* higth: el tamano maximo sera el de toda la pantalla
+min-higth: el tamano minimo sera el de la pantalla */
+
+/* el sidebar tendra el historial de las busquedas que haga el cliente */
+#sidebar{
+    height: 100%;
+    min-height: 100vh;
+    min-width: 180px;
+    background: rgb(62, 134, 134) ;
+    align-items: left;
+    text-align: center;
+    
+}
+
+.anim{
+    
+        animation: aparecer1 1s ease 1 backwards;
+}
+
+@keyframes aparecer1{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+
+
+.texto{
+    font-family: monospace;
+    font-size: 1rem;
+    text-decoration: solid;
+    padding: 0rem;
+}
+
+.subtitulo{
+    font-size: .5rem;
+    text-align: center;
+    align-items: center;
+}
+.ul{
+    text-align: center;
+    align-items: center;
+    display: grid;
+}
+.listaResultados{
+    list-style: none;
+    font-size: .6rem;
+    margin-right: 2rem;
+}
+
+.listaResultados .a{
+    padding: .7rem;
+    align-items: center;
+}
+
+.textoCard{
+    font-size: 0.6rem;
+}
+
+.footer{
+    padding: 1rem 0;
+    text-align: center;
+    /* margin-top: auto; */
+    font-size: .4rem;
+}
